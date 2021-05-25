@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Velvetvine | Wines</title>
   </head>
   <body>
     <h1>Available variety of wines</h1>
+    <div>
+      <a href="/wines/new">Add Wine</a>
+    </div>
     <ul>
       <% for(let wine of wines) { %>
-      <li><%= wine.title%></li>
+      <li><a href="/wines/<%= wine._id%>"><%= wine.title%></a></li>
       <% } %>
     </ul>
   </body>

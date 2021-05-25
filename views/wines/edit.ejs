@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit wine</title>
+  </head>
+  <body>
+    <h2>Edit Wine Information</h2>
+    <form action="/wines/<%=wine._id%>?_method=PUT" method="POST">
+      <div>
+        <label for="title">Name</label>
+        <input
+          type="text"
+          id="title"
+          name="wine[title]"
+          value="<%=wine.title%>"
+        />
+      </div>
+      <div>
+        <label for="location">Location</label>
+        <input
+          type="text"
+          id="location"
+          name="wine[location]"
+          value="<%=wine.location%>"
+        />
+      </div>
+      <button>Update</button>
+      <div>
+        <a href="/wines/<%=wine._id%>">Back</a>
+      </div>
+    </form>
+  </body>
+</html>

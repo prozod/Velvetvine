@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velvetvine | <%= wine.title %></title>
+  </head>
+  <body>
+    <h2><%= wine.title %></h2>
+    <h3><%= wine.location %></h3>
+
+    <div>
+      <a href="/wines">All Wines</a>
+      <a href="/wines/<%=wine._id%>/edit">Edit</a>
+    </div>
+
+    <div>
+      <form action="/wines/<%=wine._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+    </div>
+  </body>
+</html>
