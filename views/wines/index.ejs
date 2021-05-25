@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<% layout('layouts/boilerplate')%>
+<div class="container d-flex">
+  <h1>Available variety of wines</h1>
 
-    <title>Velvetvine | Wines</title>
-  </head>
-  <body>
-    <h1>Available variety of wines</h1>
-    <div>
-      <a href="/wines/new">Add Wine</a>
+  <div class="row justify-content-md-center">
+    <% for(let wine of wines) { %>
+    <div class="card p-0 m-2" style="width: 16rem">
+      <img src="<%=wine.image %>" class="card-img-top" alt="..." />
+      <div class="card-body d-flex flex-column justify-content-space-around">
+        <h5 class="card-title"><%=wine.title%></h5>
+        <p class="card-text"><%=wine.location%></p>
+        <a href="/wines/<%=wine._id%>" class="btn btn-primary mt-auto"
+          >Read more</a
+        >
+      </div>
     </div>
-    <ul>
-      <% for(let wine of wines) { %>
-      <li><a href="/wines/<%= wine._id%>"><%= wine.title%></a></li>
-      <% } %>
-    </ul>
-  </body>
-</html>
+    <% } %>
+  </div>
+</div>
