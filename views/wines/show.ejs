@@ -20,11 +20,11 @@
           </p>
           <div class="d-flex">
             <a href="/wines/" class="btn btn-primary">Our Collection</a>
-            <a href="/wines/<%=wine._id%>/edit" class="btn btn-primary mx-1"
+            <a href="/wines/<%=wine._id%>/edit" class="btn btn-warning mx-1"
               >Edit</a
             >
             <form action="/wines/<%=wine._id%>?_method=DELETE" method="POST">
-              <button class="btn btn-primary">Delete</button>
+              <button class="btn btn-danger">Delete</button>
             </form>
           </div>
         </div>

@@ -54,14 +54,15 @@
     <div class="form-group row">
       <label for="image" class="col-sm-5 col-form-label">Description</label>
       <div class="col-sm-20">
-        <input
+        <textarea
           type="text"
           class="form-control"
           id="description"
           placeholder=""
           name="wine[description]"
-          value="<%=wine.description%>"
-        />
+        >
+<%=wine.description%></textarea
+        >
       </div>
     </div>
 
